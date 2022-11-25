@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+//function
+@mixin funflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+//cabecario
+header{
+    @include funflex;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    padding: 10px;
+
+    .header_left{
+       @include funflex();
+
+        img{
+            width: 33px;
+            height: 33px;
+            margin-right: 10px;
+        }
+
+        h1{
+            font-size: 12pt;
+            cursor: pointer;
+            transition: 2.4s;
+
+            &:hover{
+                color: rgb(235, 2, 99);
+            }
+        }
+    }
+}
